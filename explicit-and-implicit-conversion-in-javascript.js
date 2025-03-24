@@ -28,5 +28,16 @@ if (isValid) {
 }
 
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5;//added explicit conversion of string to a Number
 console.log("Total Age: " + totalAge);
+
+let number = "25" / 0 //implicit conversion to a number
+if (number) {//checking for an undefined number
+  console.log("Oops! It's an undefined number")
+}
+
+let yourAge = "25";
+let howOld = Number(yourAge) - 25;//explicit conversion to a number
+if (!howOld) {//checking for zero
+  console.log("You were not born yet!")
+}
